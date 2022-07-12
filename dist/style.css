@@ -1,0 +1,178 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 20px;
+  font-family: Tahoma, sans-serif;
+  color: palegreen;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #303030;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.func-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.func-btn {
+  font-size: 1rem;
+  padding: 10px;
+  width: 100px;
+  background: none;
+  color: inherit;
+  border: 2px solid;
+  transition: 0.1s;
+}
+.func-btn:hover:enabled {
+  box-shadow: 0 0 10px 4px;
+  transform: scale(0.9);
+}
+.func-btn:disabled {
+  background: rgba(95, 40, 0, 0.6);
+}
+
+.radio-wrapper {
+  border-radius: 30px;
+  border: 2px solid;
+  overflow: hidden;
+  width: 200px;
+  display: flex;
+}
+
+input[type=radio] {
+  width: 0.2px;
+  opacity: 0;
+}
+
+.mode-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  transition: 0.25s;
+}
+
+.right-divider {
+  border-right: 1px solid palegreen;
+}
+
+.checked {
+  color: whitesmoke;
+  box-shadow: inset 0 0 10px 4px palegreen;
+}
+
+.field-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 50%;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.field-btn {
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  color: transparent;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.field-btn:hover {
+  background: darkgray;
+}
+.field-btn:active {
+  background: gainsboro;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.highlight-0 {
+  animation: 1s ease-in-out infinite shine-lightsalmon;
+}
+
+@keyframes shine-lightsalmon {
+  0% {
+    background-color: gray;
+  }
+  50% {
+    background-color: lightsalmon;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+.highlight-1 {
+  animation: 1s ease-in-out infinite shine-skyblue;
+}
+
+@keyframes shine-skyblue {
+  0% {
+    background-color: gray;
+  }
+  50% {
+    background-color: skyblue;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+.highlight-2 {
+  animation: 1s ease-in-out infinite shine-palegoldenrod;
+}
+
+@keyframes shine-palegoldenrod {
+  0% {
+    background-color: gray;
+  }
+  50% {
+    background-color: palegoldenrod;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+.highlight-3 {
+  animation: 1s ease-in-out infinite shine-palegreen;
+}
+
+@keyframes shine-palegreen {
+  0% {
+    background-color: gray;
+  }
+  50% {
+    background-color: palegreen;
+  }
+  100% {
+    background-color: gray;
+  }
+}
